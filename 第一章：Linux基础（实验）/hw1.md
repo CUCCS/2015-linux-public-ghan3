@@ -63,62 +63,75 @@ vim isolinux/txt.cfg
 
 - 通过sftp将custom.iso下载到本地   
 
-![](./pic/get custom.PNG)
+![](./pic/get-custom.PNG)
 
 - 使用custom.iso安装时发现，在Partition disks处还需要进行选择，并输入回车键。
 
-![](./pic/Partition disks.PNG)
+![](./pic/Partition-disks.PNG)
 
 - 对ubuntu-server-autoinstall.seed进行修改并重新生成镜像。（问题没有解决）   
 
 ![](./pic/dev-sda.PNG)   
 
-- 成功安装
+- 成功安装   
+
 ![](./pic/ok.PNG)
 
 ## 新添加网卡自动获取IP   
 
-- 添加内部网卡
+- 添加内部网卡   
+
 ![](./pic/intnet.PNG)   
 
-- 查看网卡信息
+- 查看网卡信息   
+
 ![](./pic/网卡信息.PNG)   
 
-- 配置文件`/etc/network/interfaces`
+- 配置文件`/etc/network/interfaces`   
+
 ![](./pic/enp0s8.PNG)
 
-- 重启网卡后再次查看网卡信息
+- 重启网卡后再次查看网卡信息   
+
 ![](./pic/restart.PNG)
 
 ## ubuntu-server-autoinstall.seed与示例文档对比（左侧为ubuntu-server-autoinstall.seed）
 
-- 选择支持的地点；跳过语言支持的选择
+- 选择支持的地点；跳过语言支持的选择   
+
 ![](./pic/locale-language.PNG)
 
-- 设置链接等待时间为5秒；设置dhcp服务等待时间为5秒；开启手动配置网络
+- 设置链接等待时间为5秒；设置dhcp服务等待时间为5秒；开启手动配置网络   
+
 ![](./pic/d-i timeout.PNG)   
 
-- 设置静态IP地址、子网掩码、网关、名称服务器地址   
+- 设置静态IP地址、子网掩码、网关、名称服务器地址    
+
 ![](./pic/IPv4.PNG)
 
 - 设置默认主机名、域名
-- 强制主机名为`isc-vm-host`
+- 强制主机名为`isc-vm-host`   
+
 ![](./pic/hostname.PNG)
 
-- 设置默认用户名和密码   
+- 设置默认用户名和密码    
+
 ![](./pic/cuc-cuc.PNG)
 
 - 设置时区为上海
-- 安装期间，不使用ntp设置时间
+- 安装期间，不使用ntp设置时间  
+
 ![](./pic/time.PNG)
 
 - 对于LVM分区，选择尽可能多的空间
-- 选择分区目录：/home /var/ tmp分离  
+- 选择分区目录：/home /var/ tmp分离
+
 ![](./pic/size.PNG)
 
 - 安装`openssh-server`
 - 在`debootstrap`之后不更新安装包
 - 自动安装安全更新
+
 ![](./pic/packages.PNG)
 
 ## putty免密登录   
@@ -126,9 +139,11 @@ vim isolinux/txt.cfg
 - 打开PUTTY.EXE，点击‘Generate’生成公私钥，保存私钥
 
 - 在虚拟机根目录下创建‘.ssh’文件夹，将公钥写入该文件夹下的'authorized_keys'文件   
+
 ![](./pic/authorized_keys.PNG)   
 
-- 将私钥导入PUTTY，并填入登录用户名和连接IP，成功实现免密登录   
+- 将私钥导入PUTTY，并填入登录用户名和连接IP，成功实现免密登录    
+
 ![](./pic/免密.PNG)   
 
 ## 参考资料
