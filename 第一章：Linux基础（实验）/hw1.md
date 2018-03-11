@@ -66,12 +66,9 @@ vim isolinux/txt.cfg
 ![](./pic/get-custom.PNG)
 
 - 使用custom.iso安装时发现，在Partition disks处还需要进行选择，并输入回车键。
+- 新建虚拟虚拟硬盘，再挂载custom.iso镜像文件后问题解决。
 
-![](./pic/Partition-disks.PNG)
-
-- 对ubuntu-server-autoinstall.seed进行修改并重新生成镜像。（问题没有解决）   
-
-![](./pic/dev-sda.PNG)   
+![](./pic/Partition-disks.PNG)   
 
 - 成功安装   
 
@@ -89,11 +86,11 @@ vim isolinux/txt.cfg
 
 - 配置文件`/etc/network/interfaces`   
 
-![](./pic/enp0s8.PNG)
+![](./pic/enp0s8-2.PNG)
 
 - 重启网卡后再次查看网卡信息   
 
-![](./pic/restart.PNG)
+![](./pic/restart-2.PNG)
 
 ## ubuntu-server-autoinstall.seed与示例文档对比（左侧为ubuntu-server-autoinstall.seed）
 
