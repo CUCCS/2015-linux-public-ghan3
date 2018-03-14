@@ -4,6 +4,13 @@
 
 - 安装asciinema
 
+ * 推荐安装步骤   
+```bash
+#使用ubuntu16.04官方仓库进行安装，确保软件安全
+sudo apt install asciinema
+```
+![](./img/install2.PNG)
+
   * asciinema官方安装步骤
 ```bash
 sudo apt-add-repository ppa:zanchey/asciinema
@@ -11,13 +18,6 @@ sudo apt-get update
 sudo apt-get install asciinema
 ```
 ![](./img/install.PNG)  
-
-  * 推荐安装步骤   
-```bash
-#使用ubuntu16.04官方仓库进行安装，确保软件安全
-sudo apt install asciinema
-```
-![](./img/install2.PNG)
 
 
 - 关联asciinema
@@ -93,7 +93,7 @@ asciinema auth
 ![](./img/Ctrl+G.PNG)
 
   * 在Normal模式下输入`:set number`在文件中显示行号，效果如下图所示。
-  ![](./img/set number.PNG)
+  ![](./img/set-number.PNG)
 
 
 - 在文件中进行关键词搜索你会哪些方法？如何设置忽略大小写的情况下进行匹配搜索？如何将匹配的搜索结果进行高亮显示？如何对匹配到的关键词进行批量替换？       
