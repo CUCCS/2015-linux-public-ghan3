@@ -3,16 +3,25 @@
 ## 配置asciinema
 
 - 安装asciinema
-```shell
+
+  * asciinema官方安装步骤
+```bash
 sudo apt-add-repository ppa:zanchey/asciinema
 sudo apt-get update
 sudo apt-get install asciinema
 ```
-![](./img/install.PNG)
+![](./img/install.PNG)  
+
+  * 推荐安装步骤   
+```bash
+#使用ubuntu16.04官方仓库进行安装，确保软件安全
+sudo apt install asciinema
+```
+![](./img/install2.PNG)
+
 
 - 关联asciinema
-
-```shell
+```bash
 asciinema auth
 ```
 ![](./img/auth.PNG)
@@ -42,10 +51,10 @@ asciinema auth
 命令行模式(Ed Mode)：一般模式输入`:`
 
 - Normal模式下，从当前行开始，一次向下移动光标10行的-操作方法？如何快速移动到文件开始行和结束行？如何快速跳转到文件中的第N行？   
-下移光标十行：`10g`   
+下移光标十行：`10j`   
 快速移动到文件开始行：`gg`   
 移动到文件结束行：`G`    
-移动到文件中的第N行：`N G`
+移动到文件中的第N行：`NG`
 
 - Normal模式下，如何删除单个字符、单个单词、从当前光标位置一直删除到行尾、单行、当前行开始向下数N行？    
 删除单个字符：`x`   
@@ -56,7 +65,7 @@ asciinema auth
 
 - 如何在vim中快速插入N个空行？如何在vim中快速输入80个-？   
 插入N个空行：`No`   
-输入80个-：`80i- esc`
+输入80个-：`80i-ESC`
 
 - 如何撤销最近一次编辑操作？如何重做最近一次被撤销的操作？    
 撤销最近一次编辑操作：`u`   
@@ -64,7 +73,7 @@ asciinema auth
 
 - vim中如何实现剪切粘贴单个字符？单个单词？单行？如何实现相似的复制粘贴操作呢？   
   * 剪切粘贴   
-  单个字符`d  p`   
+  单个字符`x  p`或`d p`   
   单个单词`dw  p`    
   单行`dd p`   
   * 复制粘贴   
@@ -79,13 +88,19 @@ asciinema auth
 
 
 - 查看当前正在编辑的文件名的方法？查看当前光标所在行的行号的方法？   
-查看文件名或光标所在行号：`Ctrl+G`
+  * 查看文件名或光标所在行号：`Ctrl+G`   
+如下图所示，可以显示文件名、当前光标所在行的行号、文件总行数和当前相对百分比位置。   
+![](./img/Ctrl+G.PNG)
+
+  * 在Normal模式下输入`:set number`在文件中显示行号，效果如下图所示。
+  ![](./img/set number.PNG)
+
 
 - 在文件中进行关键词搜索你会哪些方法？如何设置忽略大小写的情况下进行匹配搜索？如何将匹配的搜索结果进行高亮显示？如何对匹配到的关键词进行批量替换？       
 关键词搜索：`/word`    
 忽略大小写匹配搜索：`:set ic`   
 搜索结果高亮显示：`set hls is`   
-匹配结果批量替换：`:s/old/new/g`   
+匹配结果批量替换：`:%s/old/new/g`   
 
 - 在文件中最近编辑过的位置来回快速跳转的方法？
 向前：`Ctrl+O`     
